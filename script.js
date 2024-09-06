@@ -20,6 +20,24 @@ function playGame() {
   let humanScore = 0;
   let computerScore = 0;
 
+  const rockButton = document.getElementById("rock");
+  const paperButton = document.getElementById("paper");
+  const scissorsButton = document.getElementById("scissors");
+  const resultDisplay = document.querySelector(".result");
+
+  rockButton.addEventListener("click", function () {
+    playRound("rock", getComputerChoice());
+  });
+
+  paperButton.addEventListener("click", function () {
+    playRound("rock", getComputerChoice());
+  });
+
+  scissorsButton.addEventListener("click", function () {
+    playRound("rock", getComputerChoice());
+    git;
+  });
+
   function playRound(humanChoice, computerChoice) {
     console.log(`Computer: ${computerChoice}, Human: ${humanChoice}`);
 
@@ -39,11 +57,6 @@ function playGame() {
   }
 
   // Play 5 rounds
-  for (let i = 0; i < 5; i++) {
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-  }
 
   // Declare the winner
   if (humanScore > computerScore) {
@@ -60,4 +73,5 @@ function playGame() {
 }
 
 // Start the game
+
 playGame();
