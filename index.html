@@ -7,7 +7,7 @@
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <h1>Rock Paper Scissors</h1>
+    <h1 class="title">Rock Paper Scissors</h1>
 
     <div class="container">
       <img src="./img/icons8-roca-80.png" alt="rock" />
@@ -23,7 +23,13 @@
 
     <!-- Elementos para mostrar el resultado -->
     <p id="result">¡Elige para empezar a jugar!</p>
-    <p id="score">Marcador: Humano 0 - Computadora 0</p>
+    <div class="results">
+      <p id="human-score">Human Score: 0</p>
+      <p id="computer-score">Computer Score: 0</p>
+      <p id="message"></p>
+    </div>
+
+    <!-- New element for result message -->
     <script src="./script.js"></script>
   </body>
 </html>
